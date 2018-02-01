@@ -1,4 +1,4 @@
-# RCP-Server and RCP-Client under amqplib for Node.JS
+# Logger-billet with the ability to connect various transports
 
 # Getting started
 
