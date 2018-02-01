@@ -4,7 +4,7 @@
 
 ## Requirements
 
-	[Node.js >= 8.9.4](https://nodejs.org)
+[Node.js >= 8.9.4](nodejs.org)
 
 ## Installation
 
