@@ -1,0 +1,26 @@
+{
+  "name": "fayulogger",
+  "version": "0.1.0",
+  "description": "Logger-billet with the ability to connect various transports",
+  "main": "index.js",
+  "scripts": {
+    "test": "vows test/* --spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ymnuk/fayulogger-js.git"
+  },
+  "keywords": [
+    "logger"
+  ],
+  "author": "Ymnuk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ymnuk/fayulogger-js/issues"
+  },
+  "homepage": "https://github.com/Ymnuk/fayulogger-js#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "vows": "*"
+  }
+}
