@@ -8,7 +8,7 @@
 
 ## Installation
 
-	npm install fayulogger-js
+	npm install fayulogger
 
 ## Levels
 
