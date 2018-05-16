@@ -72,7 +72,7 @@ vows
 						log.module.debug('DEBUG');
 					},
 					'Should return "test: DEBUG"': function(t1, t2) {
-						assert.ok(t1, 'test: DEBUG');
+						assert.equal(t1, 'test: DEBUG');
 					}
 				},
 				'Testing info': {
