@@ -71,8 +71,9 @@ vows
 						})
 						log.module.debug('DEBUG');
 					},
-					'Should return "test: DEBUG"': function(t1, t2) {
-						assert.equal(t1, 'test: DEBUG');
+					'Should return "test: DEBUG"': function(msg, a1) {
+						assert.ok(msg.name == 'test' && msg.message == 'DEBUG');
+						//assert.equal(t1, 'test: DEBUG');
 					}
 				},
 				'Testing info': {
@@ -83,7 +84,8 @@ vows
 						log.module.info('INFO');
 					},
 					'Should return "test: INFO"': function(msg, a1) {
-						assert.equal(msg, 'test: INFO');
+						assert.ok(msg.name == 'test' && msg.message == 'INFO');
+						//assert.equal(msg, 'test: INFO');
 					}
 				},
 				'Testing warn': {
@@ -94,7 +96,8 @@ vows
 						log.module.warn('WARN');
 					},
 					'Should return "test: WARN"': function(msg, a1) {
-						assert.equal(msg, 'test: WARN');
+						assert.ok(msg.name == 'test' && msg.message == 'WARN');
+						//assert.equal(msg, 'test: WARN');
 					}
 				},
 				'Testing SEVERE': {
@@ -105,7 +108,8 @@ vows
 						log.module.severe('SEVERE');
 					},
 					'Should return "test: SEVERE"': function(msg, a1) {
-						assert.equal(msg, 'test: SEVERE');
+						assert.ok(msg.name == 'test' && msg.message == 'SEVERE');
+						//assert.equal(msg, 'test: SEVERE');
 					}
 				},
 				'Testing error': {
@@ -116,7 +120,8 @@ vows
 						log.module.error('ERROR');
 					},
 					'Should return "test: ERROR"': function(msg, a1) {
-						assert.equal(msg, 'test: ERROR');
+						assert.ok(msg.name == 'test' && msg.message == 'ERROR');
+						//assert.equal(msg, 'test: ERROR');
 					}
 				},
 				'Testing fatal': {
@@ -127,7 +132,8 @@ vows
 						log.module.fatal('FATAL');
 					},
 					'Should return "test: FATAL"': function(msg, a1) {
-						assert.equal(msg, 'test: FATAL');
+						assert.ok(msg.name == 'test' && msg.message == 'FATAL');
+						//assert.equal(msg, 'test: FATAL');
 					}
 				}
 			}
@@ -154,7 +160,8 @@ vows
 						log.module.debug('DEBUG');
 					},
 					'Should return "test2: DEBUG"': function(msg, a1) {
-						assert.equal(msg, 'test2: DEBUG');
+						assert.ok(msg.name == 'test2' && msg.message == 'DEBUG');
+						//assert.equal(msg, 'test2: DEBUG');
 					}
 				},
 				'Testing SEVERE': {
@@ -165,7 +172,8 @@ vows
 						log.module.severe('SEVERE');
 					},
 					'Should return "test2: SEVERE"': function(msg, a1) {
-						assert.equal(msg, 'test2: SEVERE');
+						assert.ok(msg.name == 'test2' && msg.message == 'SEVERE');
+						//assert.equal(msg, 'test2: SEVERE');
 					}
 				},
 				'Testing fatal': {
@@ -176,7 +184,8 @@ vows
 						log.module.fatal('FATAL');
 					},
 					'Should return "test2: FATAL"': function(msg, a1) {
-						assert.equal(msg, 'test2: FATAL');
+						assert.ok(msg.name == 'test2' && msg.message == 'FATAL');
+						//assert.equal(msg, 'test2: FATAL');
 					}
 				}
 			}

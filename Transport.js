@@ -43,37 +43,43 @@ class Transport {
 
 	debug(msg) {
 		if(this.__levelCallback.debug != null && typeof(this.__levelCallback.debug) == 'function') {
-			this.__levelCallback.debug(`${msg.name}: ${msg.message}`);
+			//this.__levelCallback.debug(`${msg.name}: ${msg.message}`);
+			this.__levelCallback.debug(msg);
 		}
 	}
 
 	info(msg) {
 		if(this.__levelCallback.info != null && typeof(this.__levelCallback.info) == 'function') {
-			this.__levelCallback.info(`${msg.name}: ${msg.message}`);
+			//this.__levelCallback.info(`${msg.name}: ${msg.message}`);
+			this.__levelCallback.info(msg);
 		}
 	}
 
 	warn(msg) {
 		if(this.__levelCallback.warn != null && typeof(this.__levelCallback.warn) == 'function') {
-			this.__levelCallback.warn(`${msg.name}: ${msg.message}`);
+			//this.__levelCallback.warn(`${msg.name}: ${msg.message}`);
+			this.__levelCallback.warn(msg);
 		}
 	}
 
 	severe(msg) {
 		if(this.__levelCallback.severe != null && typeof(this.__levelCallback.severe) == 'function') {
-			this.__levelCallback.severe(`${msg.name}: ${msg.message}`);
+			//this.__levelCallback.severe(`${msg.name}: ${msg.message}`);
+			this.__levelCallback.severe(msg);
 		}
 	}
 
 	error(msg) {
 		if(this.__levelCallback.error != null && typeof(this.__levelCallback.error) == 'function') {
-			this.__levelCallback.error(`${msg.name}: ${msg.message}`);
+			//this.__levelCallback.error(`${msg.name}: ${msg.message}`);
+			this.__levelCallback.error(msg);
 		}
 	}
 
 	fatal(msg) {
 		if(this.__levelCallback.fatal != null && typeof(this.__levelCallback.fatal) == 'function') {
-			this.__levelCallback.fatal(`${msg.name}: ${msg.message}`);
+			//this.__levelCallback.fatal(`${msg.name}: ${msg.message}`);
+			this.__levelCallback.fatal(msg);
 		}
 	}
 

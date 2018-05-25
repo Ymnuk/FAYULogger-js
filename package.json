@@ -1,6 +1,6 @@
 {
   "name": "fayulogger",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Logger-billet with the ability to connect various transports",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,9 @@
     "url": "https://github.com/Ymnuk/fayulogger-js/issues"
   },
   "homepage": "https://github.com/Ymnuk/fayulogger-js#readme",
-  "dependencies": {},
+  "dependencies": {
+    "lodash.clonedeep": "*"
+  },
   "devDependencies": {
     "vows": "*"
   }

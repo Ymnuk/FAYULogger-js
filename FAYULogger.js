@@ -35,6 +35,17 @@ class FAYULogger {
 	}
 
 	/**
+	 * Список модулей как есть
+	 */
+	get modules() {
+		let res = [];
+		for(let i in this.__modules) {
+			res.push(this.__modules[i]);
+		}
+		return res;
+	}
+
+	/**
 	 * Добавление транспорта
 	 * @param {String} name Название транспорта
 	 * @param {Transport} transport Экземпляр транспорта

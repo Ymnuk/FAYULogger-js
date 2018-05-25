@@ -1,4 +1,5 @@
 const FyLoggerEmmiter = require('./libs/FyLoggerEmmiter');
+const clonedeep = require('lodash.clonedeep');
 
 /**
  * Класс модуля логирования.
@@ -27,63 +28,97 @@ class Module {
 		this.__ee.on('debug', (message) => {
 			if(this.__transports.length > 0) {
 				for(let i of this.__transports) {
-					i.debug({
+					i.debug(this.__prepareMessage(message)/*{
 						name: this.__name,
-						message: message}
-					);
+						message: message
+					}*/);
 				}
 			}
 		});
 		this.__ee.on('info', (message) => {
 			if(this.__transports.length > 0) {
 				for(let i of this.__transports) {
-					i.info({
+					i.info(this.__prepareMessage(message)/*{
 						name: this.__name,
 						message: message
-					});
+					}*/);
 				}
 			}
 		});
 		this.__ee.on('warn', (message) => {
 			if(this.__transports.length > 0) {
 				for(let i of this.__transports) {
-					i.warn({
+					i.warn(this.__prepareMessage(message)/*{
 						name: this.__name,
 						message: message
-					});
+					}*/);
 				}
 			}
 		});
 		this.__ee.on('severe', (message) => {
 			if(this.__transports.length > 0) {
 				for(let i of this.__transports) {
-					i.severe({
+					i.severe(this.__prepareMessage(message)/*{
 						name: this.__name,
 						message: message
-					});
+					}*/);
 				}
 			}
 		});
 		this.__ee.on('error', (message) => {
 			if(this.__transports.length > 0) {
 				for(let i of this.__transports) {
-					i.error({
+					i.error(this.__prepareMessage(message)/*{
 						name: this.__name,
 						message: message
-					});
+					}*/);
 				}
 			}
 		});
 		this.__ee.on('fatal', (message) => {
 			if(this.__transports.length > 0) {
 				for(let i of this.__transports) {
-					i.fatal({
+					i.fatal(this.__prepareMessage(message)/*{
 						name: this.__name,
 						message: message
-					});
+					}*/);
 				}
 			}
 		});
+	}
+
+	__prepareMessage(message) {
+		if(message instanceof Array) {
+			return {
+				name: this.__name,
+				message: message
+			}
+		}
+		if(message instanceof String) {
+			return {
+				name: this.__name,
+				message: message.toSting()
+			}
+		}
+		if(message instanceof Number) {
+			return {
+				name: this.__name,
+				message: message
+			}
+		}
+		if(message instanceof Object) {
+			let obj = clonedeep(message);
+			obj.name = this.__name;
+			return obj;
+		}
+		return {
+			name: this.__name,
+			message: message
+		}
+	}
+
+	get name() {
+		return this.__name;
 	}
 
 	debug(message) {
